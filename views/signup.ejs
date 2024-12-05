@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+      /* Add margin to the bottom of error messages */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px; /* Adjust this margin as needed */
+}
+
+/* Add margin to the top of the signup button */
+form .btn {
+  margin-top: 20px; /* Adjust this margin as needed */
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="log"></div>
+        <div class="logo"><a href="/">Tech<span>Fanatics</span></a></div>
+        <div class="button">
+          <a href="/#teams">Browse Course</a>
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="center">
+      <div class="container" style="top:60%;">
+        <div class="text">SignUp Form</div>
+        <% if (message) { %>
+          <p style="color: red; text-align: center;"><%= message %></p>
+        <% } %>
+        <form method="post" action="/signup" onsubmit="return validateForm()">
+          <div class="data">
+            <label>Name</label>
+            <input type="text" id="name" name="username" required>
+            <div id="name-error" class="error-message"></div>
+          </div>
+          <div class="data">
+            <label>Mail id</label>
+            <input type="email" id="email" name="email" required>
+            <div id="email-error" class="error-message"></div>
+          </div>
+          <div class="data">
+            <label>Password</label>
+            <input type="password" id="password" name="password" required>
+            <div id="password-error" class="error-message"></div>
+          </div>
+          <br>
+          <div class="btn">
+            <div class="inner"></div>
+            <button type="submit">SignUp</button>
+          </div>
+          <div class="signup-link">
+            Already a member? <a href="/login">Login now</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function validateForm() {
+        // Regular expressions for pattern matching
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/;
+
+        // Function to display error messages
+        function showError(fieldId, message) {
+          document.getElementById(fieldId).innerHTML = message;
+          return false;
+        }
+
+        // Validate Name
+        const name = document.getElementById('name').value;
+        if (!nameRegex.test(name)) {
+          return showError('name-error', 'Invalid name');
+        }
+
+        // Validate Email
+        const email = document.getElementById('email').value;
+        if (!emailRegex.test(email)) {
+          return showError('email-error', 'Invalid email');
+        }
+
+        // Validate Password
+        const password = document.getElementById('password').value;
+        if (!passwordRegex.test(password)) {
+          return showError('password-error', 'Invalid password. Password must be at least 6 characters and include letters, numbers, and special characters.');
+        }
+
+        return true; // Form is valid
+      }
+    </script>
+  </body>
+</html>

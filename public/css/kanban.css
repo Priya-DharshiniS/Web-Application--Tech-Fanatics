@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    background-color:white;
+    color: black;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    /* Add margin: 0 to remove default body margin */
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    top: 0;
+    /* Add top: 0 to stick the navbar at the top */
+}
+
+body {
+    padding-top: 150px;
+    /* Adjust the padding value as needed based on your navbar height */
+}
+
+.navbar.sticky {
+    background: rgb(160, 56, 244);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+
+.navbar .log {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: 40px;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.navbar .logo a span {
+    color: rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .button a {
+    display: inline-block;
+    color: rgb(160, 56, 244);
+    background: none;
+    font-size: 14px;
+    padding: 8px 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+
+.navbar .button a:hover {
+    background: rgb(160, 56, 244);
+    color: #fff;
+}
+
+.navbar .button button {
+    display: inline-block;
+    background: rgb(160, 56, 244);
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+
+.navbar .button button:hover {
+    color: rgb(160, 56, 244);
+    background: none;
+}
+
+.kanban-board {
+    display: flex;
+    width: 80%;
+    /* Adjust the width as needed */
+}
+
+.column {
+    float: left;
+    flex: 1;
+    padding: 15px;
+    background-color: #292929;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-content {
+    min-height: 150px;
+    border: 1px solid #ccc;
+    padding: 19px;
+    flex-grow: 5;
+    bottom: -5px;
+    background-color: rgb(160, 56, 244);
+    position: relative;
+}
+
+h2[id=todo] {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color:lightcoral;
+    padding: 5px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2[id=progress] {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color:rgb(247, 247, 112);
+    padding: 5px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2[id=done] {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color:lightgreen;
+    padding: 5px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+    height: 200px;
+    background-color: #292929;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: move;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .icon {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width: 80px;
+    background: linear-gradient(90deg, #7eaaff 0%, #ff48fb 40%, rgba(0, 0, 0, 0.28) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+  }
+  
+  .icon svg {
+    fill: white;
+  }
+  
+  .card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  .card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    height: 250px;
+  }
+  
+  .card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 40px;
+  }
+  
+  .card:hover .icon {
+    background-position: -120px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover .icon svg path {
+    fill: url('#gradientColor');
+    transition: all 0.3s ease;
+  }
+
+  .card.disabled {
+    opacity: 0.5; /* You can adjust the opacity or add other styles as needed */
+    pointer-events: none; /* This prevents interactions with the disabled card */
+}

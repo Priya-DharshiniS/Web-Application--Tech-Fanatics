@@ -1,0 +1,388 @@
+/* === Google Font Import - Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: white;
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Add margin: 0 to remove default body margin */
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+  top: 0; /* Add top: 0 to stick the navbar at the top */
+}
+
+/* ... your existing CSS ... */
+
+/* Add some padding to the body to push the content down below the fixed navbar */
+body {
+  padding-top: 70px; /* Adjust the padding value as needed based on your navbar height */
+}
+
+
+
+body {
+  background-color: white;
+  color:  white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: rgb(160, 56, 244);
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+}
+.navbar .log {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-image:url("../images/logo.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: 60px;
+}
+.navbar .logo a{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: -10px;/*margin-left:180px*/
+}
+.navbar .logo a span{
+  color: rgb(160, 56, 244);
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  color: #fff;
+}
+
+.navbar .button a{
+  display: inline-block;
+  background: rgb(160, 56, 244);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 24px;
+  margin-right: 60px;/*-190px;*/
+  font-weight: 600;/*400px*/
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.navbar .button a:hover{
+  color: rgb(255, 255, 255);
+  background: none;
+  border: 2px solid rgb(160, 56, 244);
+}
+.profile {
+  margin: 50px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+}
+.profile .top
+{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      justify-content: center;
+      padding: 20px 30px;
+}
+  
+  .image-container {
+      margin: 20px 43px;
+  }
+  
+  .image-container img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+  }
+  .container{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+      display: flex;
+      width: 300px;
+      padding: 50px 0;
+      border-radius: 8px;
+      background: none;
+      row-gap: 30px;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 4px;
+  }
+  .circular-progress{
+      position: relative;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .circular-progress::before{
+      content: "";
+      position: absolute;
+      height: 130px;
+      width: 130px;
+      border-radius: 50%;
+      background-color: #fff;
+  }
+  .progress-value{
+      position: relative;
+      font-size: 40px;
+      font-weight: 600;
+      color: #7d2ae8;
+  }
+  .text{
+      font-size: 30px;
+      font-weight: 500;
+      color:  rgb(160, 56, 244);;
+  }
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+
+/* ... your existing styles ... */
+
+/* Add these styles at the end of your existing profile.css file */
+#profile-container {
+  position: relative;
+}
+
+#profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#icon {
+  position: absolute;
+  bottom: 42px;
+  right: 10px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color:#222;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#dropdown label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#dropdown input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+/* ... your existing CSS ... */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:20px 0;
+}
+
+.card {
+  background-color:  rgb(160, 56, 244);;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  width: calc(33.33% - 20px); /* 3 cards per column with some spacing */
+  box-sizing:border-box;
+}
+
+/* ... your existing CSS ... */
+.button{
+  display: flex;
+  align-items: center;
+}
+.button a{
+  display: inline-block;
+  background: rgb(160, 56, 244);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 24px;
+  font-weight: 400;
+  border-radius: 14px;
+  border: 2px solid rgb(160, 56, 244);
+  transition: all 0.3s ease;
+  margin: auto;
+}
+.button a:hover{
+  color: rgb(160, 56, 244);
+  background: none;
+}
+.button1{
+  border: none;
+  font-size: 16px;
+  color: #222;
+  padding: 8px 16px;
+  background-color:#fff;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button1:hover{
+  background:rgb(160, 56, 244);
+  color:#222;
+}
+h2 {
+  font-size: 18px;
+  color:black;
+}
+h4{
+  color: rgb(160, 56, 244);;
+}
+section{
+  position: relative;  
+  height: 400px;
+  width: 1240px;
+  display: flex;
+  align-items: center;
+  left:250px;
+}
+
+.swiper{
+  width: 1050px;
+}
+.swiper-container {
+  height: 300px; /* or any desired height */
+  overflow: hidden;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  border-radius: 1px;
+  margin: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  right:-1px;
+  top:-31px;
+  background: #7d2ae8;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+section .card .image{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #7d2ae8;
+}
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #7d2ae8;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  display: none !important;
+  opacity: 0.7;
+  color: #7d2ae8;
+  transition: all 0.3s ease;
+  position:absolute !important;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: #7d2ae8;
+}

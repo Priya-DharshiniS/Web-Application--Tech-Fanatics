@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    background-color:  rgb(160, 56, 244);
+    color:black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Add margin: 0 to remove default body margin */
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    top: 0; /* Add top: 0 to stick the navbar at the top */
+}
+
+/* ... your existing CSS ... */
+
+/* Add some padding to the body to push the content down below the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust the padding value as needed based on your navbar height */
+}
+
+.navbar.sticky{
+    background: rgb(160, 56, 244);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+.navbar .log {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-image:url("../images/logo.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: 40px;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+.navbar .logo a span{
+    color: rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+
+.navbar .button a{
+    display: inline-block;
+    color: rgb(160, 56, 244);
+    background: none;
+    font-size: 14px;
+    padding: 8px 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+.navbar .button a:hover{
+    background: rgb(160, 56, 244);
+    color: #fff;
+}
+.quiz-container
+{
+    width:80%;
+    margin:0 auto;
+}
+h1
+{
+    text-align: center;
+    color:white;
+    margin-right: 140px;
+}
+h4{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-left: -153px;
+    width: 126%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.question
+{
+    width:95%;
+    margin-bottom:20px;
+    background:#fff;
+    padding:20px;
+}
+.question:nth-child(odd)
+{
+    margin-right: 5%;
+}
+.question p
+{
+    font-weight: bold;
+    display: flex;
+}
+.answers
+{
+    margin-bottom:20px;
+}
+.answers label:not(:first-child)
+{
+    border-top:1px solid #e0e0e0;
+}
+.answers label input[type="radio"] {
+    display: none;
+}
+
+/* Style the custom radio button for selected option in green */
+.answers label input:checked + .custom-radio {
+    border: 2px solid blue;
+    background-color: rgb(45, 176, 220);
+}
+
+/* Style disabled options in red */
+.answers label input:disabled + .custom-radio {
+    border: 2px solid red;
+    background-color: lightcoral;
+}
+
+/* Custom radio button style */
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* Style the inner circle of the custom radio button */
+.custom-radio::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+/* Style the inner circle of the custom radio button when checked */
+.answers label input:checked + .custom-radio::after {
+    display: block;
+}
+label
+{
+    padding:20px 0;
+    display:flex;
+    margin-bottom: 10px;
+    align-items: baseline;
+    justify-content: flex-start;
+
+}
+
+.submit-btn
+{
+    display: inline-block;
+    margin-bottom: 20px auto;
+    padding:10px 20px;
+    color:white;
+    background:  rgb(30, 18, 40);
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 14px;
+    padding: 8px 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+.submit-btn:hover{
+    background: #fff;
+    color: rgb(160, 56, 244);
+}
+.result
+{
+    font-weight:bold;
+    font-size:22px;
+    margin-top:20px;
+    padding:10px;
+    color:white;
+    background:  rgb(30, 18, 40);
+    border-radius:5px;
+    text-align:center;
+
+
+}
+footer {
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+  }
+  footer p {
+    font-size: 14px; 
+    margin: 0;
+  }

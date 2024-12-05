@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    display: flex;
+    background-image: url('../images/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 139vh; /* Ensure at least viewport height */
+}
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    top: 0;
+    /* Add top: 0 to stick the navbar at the top */
+}
+
+body {
+    padding-top: 150px;
+    /* Adjust the padding value as needed based on your navbar height */
+}
+
+.navbar.sticky {
+    background: rgb(160, 56, 244);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+
+.navbar .log {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+    background-position: center;
+    margin-left: 40px;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.navbar .logo a span {
+    color: rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .button a {
+    display: inline-block;
+    color: rgb(160, 56, 244);
+    background: none;
+    font-size: 14px;
+    padding: 8px 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 14px;
+    border: 2px solid rgb(160, 56, 244);
+    transition: all 0.3s ease;
+}
+
+.navbar .button a:hover {
+    background: rgb(160, 56, 244);
+    color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.form-container {
+    width: 748px;
+    height: 436px;
+    top: 30%;
+    background: linear-gradient(#212121, #212121) padding-box, linear-gradient(145deg,#e81cff, #40c9ff) border-box;
+    border: 20px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-size: 100% 100%;
+    animation: gradient 5s ease infinite;
+    position: absolute;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 50% 80%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 50% 80%;
+    }
+  }
+  .form-container button:active {
+    scale: 0.95;
+  }
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:500px;
+    margin: 0 auto;
+}
+video {
+    width: auto;
+    height: auto;
+    top:-173px;
+    max-width: 135%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+/* Add this CSS to your existing styles or create a new CSS file */
+#video-title-container {
+    text-align: center;
+    margin:-216px; /* Adjust the margin as needed */
+    position: absolute;
+    top: 58%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#video-title {
+    font-size: 2em;
+    font-style: oblique;
+    color:rgb(160, 56, 244);/* Adjust the color as needed */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#video-title.active {
+    opacity: 1;
+}
+

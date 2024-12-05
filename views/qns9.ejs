@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech Fanatics</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="/css/qns.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="log">
+                </div>
+                <div class="logo"><a href="#">Tech<span>Fanatics</span></a></div>
+                <div class="button">
+                    <a href="/profile">Back to Profile</a>
+                    <a href="/kanban">Back</a>
+                </div>
+            </div>
+        </nav>
+        <div class="quiz-container"><br>
+            <h1>JS SETS</h1><br>
+            <h4>Note:Once an answer has been selected, it will become unavailable or disabled for further selection or interaction.Please be cautious!</h4>
+            <br>
+            <form id="quiz-form" action="/kanban">
+                <div class="question">
+                    <p>1.What is a Set in JavaScript?</p>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="q1" value="a" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> A collection of ordered elements
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> A data type that represents integers
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> A special type of function
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="d" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> A Set is a Data Structure in which values may occur only once; 
+                            that is ,duplicate values are not allowed
+                        </label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>2.How do you create an empty Set in JavaScript?/p>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="q2" value="a" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> let mySet = set();
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> let mySet = Set();
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> let mySet = new Set();
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="d" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> let mySet = createSet();
+                        </label>
+                    </div>
+                </div>
+                    <div class="question">
+                        <p>3.Whst is the syntax for creating a set?
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q3" value="a" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span> new Set([it]);
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span> new Set([]);
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span>new Set([it])
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="d" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span>  Set([]);
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>4.What method is used to add an element to a Set in JavaScript?
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q4" value="a"onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> addElement() 
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> insert()
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> add()
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="d" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> push()
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>5.How do you check if a value exists in a Set in JavaScript? </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q5" value="a" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  mySet.contains(value);
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  mySet.has(value);
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="c" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span> mySet.include(value);
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="d" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  mySet.exists(value);
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>6.Consider the following code snippet:let mySet = new Set([1, 2, 3, 4]);
+                            mySet.delete(3);
+                            What is the size of the mySet after this code executes?
+                             </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q6" value="a" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  4 
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="b" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  3
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="c" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  2
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="d" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  1
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>7. What is the purpose of the clear method in JavaScript Sets? </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q7" value="a" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>   It removes the first element from the Set
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="b" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>   It deletes all elements from the Set. 
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="c" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>   It reverses the order of elements in the Set.
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="d" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>   It adds a new element to the Set.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>8. How do you convert a Set to an Array in JavaScript?
+                        </p>  
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q9" value="a" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  Array.from(mySet);
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="b" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span> mySet.toArray();
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="c" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>   mySet.convertToArray();
+                            <label>
+                                <input type="radio" name="q9" value="d" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  Array.convert(mySet);
+                        </div>
+                    </div>
+                    <div class="question">
+                 <p>9.Consider the following code snippet: let setA = new Set([1, 2, 3]);
+                            let setB = new Set([2, 3, 4]);
+                            let unionSet = new Set([...setA, ...setB]);
+                            What elements are in the unionSet?
+                        </p>  
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q9" value="a" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  [1, 2, 3]
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="b" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  [2, 3, 4]
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="c" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>   [1, 2, 3, 4]
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="d" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  [1, 3, 4]
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>10.What is the purpose of the forEach method in JavaScript Sets?
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q10" value="a" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>   Removes elements from the Set.
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="b" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>   It adds a new element to the Set.
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="c" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>   It iterates over each element in the Set.
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="d" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>   It checks if a specific value exists in the Set.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <div class="button" style="  display: inline-block;
+                margin-bottom: 20px auto;
+                padding:10px 20px;
+                color:white;
+                background:  rgb(30, 18, 40);
+                border-radius: 5px;
+                cursor:pointer;
+                font-size: 14px;
+                padding: 8px 24px;
+                margin-right: 10px;
+                font-weight: 400;
+                border-radius: 14px;
+                border: 2px solid rgb(160, 56, 244);
+                transition: all 0.3s ease;">
+                    <a href="#" onclick="moveToDone('card9')" style="color: white;">Close</a>
+                </div>
+            </form>
+            <div class="result" id="result"></div><br>
+        </div>
+        <br>
+        <script>
+            function disableOtherOptions(selectedOption, questionName) {
+                const options = document.getElementsByName(questionName);
+                for (let i = 0; i < options.length; i++) {
+                    options[i].disabled = true;
+                }
+                selectedOption.disabled = false;
+            }
+    
+            const quizform = document.getElementById('quiz-form');
+            const resultdiv = document.getElementById('result');
+            const correctAnswers = ['b', 'c', 'c', 'b', 'b', 'd', 'd', 'd', 'b', 'a'];
+    
+            quizform.addEventListener('submit', async function (e) {
+                e.preventDefault();
+    
+                let score = 0;
+                const userAnswers = [];
+    
+                for (let i = 0; i < correctAnswers.length; i++) {
+                    const option = quizform.elements['q' + (i + 1)];
+    
+                    // Check if any option is selected for the question
+                    if (option) {
+                        const selectedAnswer = Array.from(option).find(input => input.checked);
+    
+                        if (selectedAnswer) {
+                            userAnswers.push(selectedAnswer.value);
+    
+                            // Disable the options after selection
+                            option.forEach(input => input.disabled = true);
+                        }
+                    }
+                }
+    
+                for (let i = 0; i < userAnswers.length; i++) {
+                    const answer = userAnswers[i];
+                    if (answer === correctAnswers[i]) {
+                        score += 1;
+                    }
+                }
+    
+                // Save the quiz result to MongoDB and display the score
+                await saveQuizResult(userAnswers);
+    
+                // Display the total score in the resultdiv
+                resultdiv.innerHTML = `Your score is ${score}/${correctAnswers.length}`;
+            });
+            quizform.addEventListener('submit',function(e) {
+            e.preventDefault();
+
+            let score = 0;
+            const userAnswers = [
+                // Your existing logic to collect user answers
+            ];
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                const answer = userAnswers[i];
+                const option = quizform.elements['q' + (i + 1)];
+                option.disabled = true;
+
+                if (answer === correctAnswers[i]) {
+                    score += 1;
+                }
+            }
+
+            // Save the card state in local storage
+            localStorage.setItem('card1', 'done');
+
+            resultdiv.innerHTML = `Your score is ${score}/${correctAnswers.length}`;
+        });
+    
+            async function saveQuizResult(userAnswers) {
+                try {
+                    const response = await fetch('/saveQuizResult', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ username: '<%= username %>', userAnswers }),
+                    });
+    
+                    if (response.ok) {
+                        console.log('Quiz result saved successfully.');
+                    } else {
+                        console.error('Failed to save quiz result.');
+                    }
+                } catch (error) {
+                    console.error('Error saving quiz result:', error);
+                }
+            }
+    
+            function moveToDone(cardId) {
+// Retrieve the card state from session storage
+const cardState = sessionStorage.getItem(cardId);
+
+// Check if the card state is 'done'
+if (cardState === 'done') {
+    alert('Card already moved to done.');
+} else {
+    // Save the card state in session storage
+    sessionStorage.setItem(cardId, 'done');
+
+    // Redirect to the kanban.html page after updating the card state
+    window.location.href = '/kanban';
+}
+}
+
+window.onload = function () {
+// On page load, check and move cards that are marked as done
+for (var i = 0; i < cardSequence.length; i++) {
+    var cardId = cardSequence[i];
+    var cardState = sessionStorage.getItem(cardId);
+
+    if (cardState === 'done') {
+        var card = document.getElementById(cardId);
+        document.getElementById('done-column').appendChild(card);
+        cardStates[i] = 'done';
+    }
+}
+
+// Additional logic as needed
+};
+        </script>
+    </body>
+</html>

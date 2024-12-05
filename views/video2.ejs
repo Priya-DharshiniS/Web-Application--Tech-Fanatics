@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Fanatics</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="log">
+            </div>
+            <h1 style="color: white;margin-left: -140px;"><%= username %></h1>
+            <div class="logo"><a href="#">Tech<span>Fanatics</span></a></div>
+            <div class="button">
+                <a href="/profile">Back to Profile</a>
+                <a href="/qns2">Take Test</a>
+            </div>
+        </div>
+    </nav>
+    <div id="video-title-container">
+        <h1 id="video-title">2.SYNTAX AND STATEMENTS</h1>
+    </div>
+    <div class="form-container">
+    <form class="form">
+    <div id="video-container">
+        <video controls autoplay loop preload="auto">
+            <source src="../videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Add this div below the video container in your HTML -->
+</form>
+</div>
+    <script>
+    // Add this JavaScript code to your existing script or create a new script file
+$(document).ready(function () {
+    // Get the video title
+    var videoTitle = "2.SYNTAX AND STATEMENTS"; // Change this to the actual title of your video
+    // Set the video title in the HTML
+    $("#video-title").text(videoTitle);
+    // Show the video title with some delay after the page loads
+    setTimeout(function () {
+        $("#video-title").addClass("active");
+    }, 1000); // Adjust the delay as needed
+
+});
+</script>
+</body>
+</html>

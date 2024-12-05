@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech Fanatics</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="/css/qns.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="log">
+                </div>
+                <div class="logo"><a href="#">Tech<span>Fanatics</span></a></div>
+                <div class="button">
+                    <a href="/profile">Back to Profile</a>
+                    <a href="/kanban">Back</a>
+                </div>
+            </div>
+        </nav>
+        <div class="quiz-container"><br>
+            <h1>JS OPERATORS</h1><br>
+            <h4>Note:Once an answer has been selected, it will become unavailable or disabled for further selection or interaction.Please be cautious!</h4>
+            <br>
+            <form id="quiz-form" action="/kanban">
+                <div class="question">
+                    <p>1.What is the result of the following JavaScript expression?
+                        5 + "5";
+                    </p>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="q1" value="a" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> 10 
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span>  "55"
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> T25 
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="d" onclick="disableOtherOptions(this, 'q1');">
+                            <span class="custom-radio"></span> Error
+                        </label>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>2.Which operator is used for strict equality (both value and type) in JavaScript??</p>
+                    <div class="answers">
+                        <label>
+                            <input type="radio" name="q2" value="a" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> ==. 
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> S====r. 
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> =. 
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="d" onclick="disableOtherOptions(this, 'q2');">
+                            <span class="custom-radio"></span> !==.
+                        </label>
+                    </div>
+                </div>
+                    <div class="question">
+                        <p>3.What is the purpose of the "typeof" operator in JavaScript?</p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q3" value="a" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span> cIt checks if a variable is defined. 
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span> It returns the type of a variable or expression. 
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span> It converts a variable to a specific type
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="d" onclick="disableOtherOptions(this, 'q3');">
+                                <span class="custom-radio"></span>  It performs a logical comparison between two values.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>4.hat is the result of the following JavaScript expression:"Hello" + 5;
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q4" value="a"onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span>  "Hello5".  
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> "Hello". 
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> Error.
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="d" onclick="disableOtherOptions(this, 'q4');">
+                                <span class="custom-radio"></span> NaN.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>5.What does the JavaScript "typeof" operator return for an array? </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q5" value="a" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  "array"
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  "object"
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="c" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span> "list"
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="d" onclick="disableOtherOptions(this, 'q5');">
+                                <span class="custom-radio"></span>  "collection"
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>6.Consider the following code snippet:let x = 10;
+                            x += 5;
+                            What is the value of x after this code executes?
+                         </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q6" value="a" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span> 15
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="b" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span> 10 
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="c" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  5 
+                            </label>
+                            <label>
+                                <input type="radio" name="q6" value="d" onclick="disableOtherOptions(this, 'q6');">
+                                <span class="custom-radio"></span>  20
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>7.Which operator is used to find the remainder of a division operation in JavaScript? </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q7" value="a" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>  % 
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="b" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>  /
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="c" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>  //
+                            </label>
+                            <label>
+                                <input type="radio" name="q7" value="d" onclick="disableOtherOptions(this, 'q7');">
+                                <span class="custom-radio"></span>  %
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>8.Define type operator in javascript?
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q8" value="a" onclick="disableOtherOptions(this, 'q8');">
+                                <span class="custom-radio"></span>  defines the type of methods  
+                            </label>
+                            <label>
+                                <input type="radio" name="q8" value="b" onclick="disableOtherOptions(this, 'q8');">
+                                <span class="custom-radio"></span>  connection between strings 
+                            </label>
+                            <label>
+                                <input type="radio" name="q8" value="c" onclick="disableOtherOptions(this, 'q8');">
+                                <span class="custom-radio"></span>  used to determine the data being stored
+                            </label>
+                            <label>
+                                <input type="radio" name="q8" value="d" onclick="disableOtherOptions(this, 'q8');">
+                                <span class="custom-radio"></span> returns values
+                            </label>
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>9.What is the result of the following JavaScript expression:"20" - 5;
+                        </p>  
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q9" value="a" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  25.
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="b" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  15. 
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="c" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span> "205".
+                            </label>
+                            <label>
+                                <input type="radio" name="q9" value="d" onclick="disableOtherOptions(this, 'q9');">
+                                <span class="custom-radio"></span>  Error.
+                        </div>
+                    </div>
+                    <div class="question">
+                        <p>10. Consider the following code snippet:let y = "5";
+                            let z = 2;
+                            let result = y * z;What is the type of the result variable?
+                        </p>
+                        <div class="answers">
+                            <label>
+                                <input type="radio" name="q10" value="a" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>   "10".
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="b" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>  10.
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="c" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>  5.
+                            </label>
+                            <label>
+                                <input type="radio" name="q10" value="d" onclick="disableOtherOptions(this, 'q10');">
+                                <span class="custom-radio"></span>  Error.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <div class="button" style="  display: inline-block;
+                margin-bottom: 20px auto;
+                padding:10px 20px;
+                color:white;
+                background:  rgb(30, 18, 40);
+                border-radius: 5px;
+                cursor:pointer;
+                font-size: 14px;
+                padding: 8px 24px;
+                margin-right: 10px;
+                font-weight: 400;
+                border-radius: 14px;
+                border: 2px solid rgb(160, 56, 244);
+                transition: all 0.3s ease;">
+                    <a href="#" onclick="moveToDone('card4')" style="color: white;">Close</a>
+                </div>
+            </form>
+            <div class="result" id="result"></div><br>
+        </div>
+        <br>
+        <script>
+            function disableOtherOptions(selectedOption, questionName) {
+                const options = document.getElementsByName(questionName);
+                for (let i = 0; i < options.length; i++) {
+                    options[i].disabled = true;
+                }
+                selectedOption.disabled = false;
+            }
+    
+            const quizform = document.getElementById('quiz-form');
+            const resultdiv = document.getElementById('result');
+            const correctAnswers = ['b', 'c', 'c', 'b', 'b', 'd', 'd', 'd', 'b', 'a'];
+    
+            quizform.addEventListener('submit', async function (e) {
+                e.preventDefault();
+    
+                let score = 0;
+                const userAnswers = [];
+    
+                for (let i = 0; i < correctAnswers.length; i++) {
+                    const option = quizform.elements['q' + (i + 1)];
+    
+                    // Check if any option is selected for the question
+                    if (option) {
+                        const selectedAnswer = Array.from(option).find(input => input.checked);
+    
+                        if (selectedAnswer) {
+                            userAnswers.push(selectedAnswer.value);
+    
+                            // Disable the options after selection
+                            option.forEach(input => input.disabled = true);
+                        }
+                    }
+                }
+    
+                for (let i = 0; i < userAnswers.length; i++) {
+                    const answer = userAnswers[i];
+                    if (answer === correctAnswers[i]) {
+                        score += 1;
+                    }
+                }
+    
+                // Save the quiz result to MongoDB and display the score
+                await saveQuizResult(userAnswers);
+    
+                // Display the total score in the resultdiv
+                resultdiv.innerHTML = `Your score is ${score}/${correctAnswers.length}`;
+            });
+            quizform.addEventListener('submit',function(e) {
+            e.preventDefault();
+
+            let score = 0;
+            const userAnswers = [
+                // Your existing logic to collect user answers
+            ];
+
+            for (let i = 0; i < userAnswers.length; i++) {
+                const answer = userAnswers[i];
+                const option = quizform.elements['q' + (i + 1)];
+                option.disabled = true;
+
+                if (answer === correctAnswers[i]) {
+                    score += 1;
+                }
+            }
+
+            // Save the card state in local storage
+            localStorage.setItem('card1', 'done');
+
+            resultdiv.innerHTML = `Your score is ${score}/${correctAnswers.length}`;
+        });
+    
+            async function saveQuizResult(userAnswers) {
+                try {
+                    const response = await fetch('/saveQuizResult', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ username: '<%= username %>', userAnswers }),
+                    });
+    
+                    if (response.ok) {
+                        console.log('Quiz result saved successfully.');
+                    } else {
+                        console.error('Failed to save quiz result.');
+                    }
+                } catch (error) {
+                    console.error('Error saving quiz result:', error);
+                }
+            }
+    
+            function moveToDone(cardId) {
+// Retrieve the card state from session storage
+const cardState = sessionStorage.getItem(cardId);
+
+// Check if the card state is 'done'
+if (cardState === 'done') {
+    alert('Card already moved to done.');
+} else {
+    // Save the card state in session storage
+    sessionStorage.setItem(cardId, 'done');
+
+    // Redirect to the kanban.html page after updating the card state
+    window.location.href = '/kanban';
+}
+}
+
+window.onload = function () {
+// On page load, check and move cards that are marked as done
+for (var i = 0; i < cardSequence.length; i++) {
+    var cardId = cardSequence[i];
+    var cardState = sessionStorage.getItem(cardId);
+
+    if (cardState === 'done') {
+        var card = document.getElementById(cardId);
+        document.getElementById('done-column').appendChild(card);
+        cardStates[i] = 'done';
+    }
+}
+
+// Additional logic as needed
+};
+        </script>
+    </body>
+</html>
